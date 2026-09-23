@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PanelRezerwacji.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label 
+                Text="Panel Rezerwacji"
+                FontSize="30"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+            <Label 
+                Text="Krótki opis"
+                FontSize="15"
+                HorizontalOptions="Center" />
+
+            <Grid 
+                ColumnDefinitions="*,*"
+                ColumnSpacing="20">
+
+                <Entry 
+                    Grid.Column="0"
+                    Placeholder="Wprowadź imię" />
+
+                <Entry 
+                    Grid.Column="1"
+                    Placeholder="Wprowadź nazwisko" />
+
+            </Grid>
+
+            <Entry 
+                Placeholder="Dodatkowa informacja lub komentarz" />
+
+            <Picker
+                Title="Wybierz rodzaj rezerwacji"
+                x:Name="picker">
+
+                <Picker.Items>
+                    <x:String>Sala standardowa</x:String>
+                    <x:String>Sala premium</x:String>
+                    <x:String>Sala VIP</x:String>
+                    <x:String>Sala konferencyjna</x:String>
+                </Picker.Items>
+
+            </Picker>
+            <Label 
+                
+                />
+            <Slider 
+                Minimum="1"
+                Maximum="5"
+                Value="1" />
+
+            <DatePicker />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
